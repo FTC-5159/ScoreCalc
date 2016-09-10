@@ -1,0 +1,12 @@
+div#main-container {
+  margin: 0px !important;
+}
+
+div.panel {
+  margin-top: 10px !important;
+}
+
+h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
