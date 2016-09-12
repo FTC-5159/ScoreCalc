@@ -1,26 +1,42 @@
-var beaconArray = new Array(3);
+/*
+  IDs of elements
+- auto-beacon-[0-2]
+- auto-parking-[center / ramp]
+- auto-balls-[side / center][+ / -]
+- auto-ball-dislodged
+
+
+*/
 
 setup();
 
 function setup() {
-  for (var i = 0; i < 3; i++) {
-    var lbl = document.createElement("label");
-    lbl.setAttribute('class', 'radio-inline');
-    beaconArray[i] = document.createElement("input");
-    beaconArray[i].type = "radio";
-    beaconArray[i].id = "auto-beacon-" + i;
-    lbl.appendChild(beaconArray[i]);
-    lbl.innerHTML = lbl.innerHTML + " " + i + " ";
-    document.getElementById("beacon-form").appendChild(lbl);
+  var buttons = document.getElementsByTagName("button")
 
+  var increasers = []
+  var decreasers = []
+
+  for (var i = 0; i < buttons.length; i++) {
+    var length = buttons[i].id.length
+    console.log(buttons[i].id.charAt(length - 1))
+    if (buttons[i].id.charAt(length - 1) === "+") {
+      buttons[i].addEventListener('click', function() {
+        var input = document.getElementById(event.target.id.substring(0, event.target.id.length - 1))
+        console.log(input)
+      }, false)
+    } else if (buttons[i].id.charAt(length - 1) === "-"){
+      buttons[i].addEventListener('click', function() {
+        console.log("DECREASED!!!")
+      }, false)
+    }
   }
+
+
 }
 
 document.addEventListener('click', function() {
-  if (event.target.id.indexOf('auto-beacon') !== -1) {
-    for (var i = 0; i < 3; i++) {
-      document.getElementById("auto-beacon-" + i).checked = false;
-    }
-    event.target.checked = true;
+  if (event.target.className.indexOf("increase") !== -1) {
+    console.log("testing 123")
   }
+
 })
