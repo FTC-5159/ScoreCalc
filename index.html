@@ -7,38 +7,170 @@
     <title>FTC Score Calculator</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/stylesheet.css" rel="stylesheet"
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <!--[endif]-->
+    <link href="css/stylesheet.css" rel="stylesheet">
   </head>
   <body>
     <div class="row">
-    <div class="col-md-1">&nbsp;</div>
-    <div class="col-md-5" id="input-side">
-      <div class="panel panel-default" id="autonomous-panel">
-        <div class="panel-body">
-          <h3>Autonomous</h3>
-        </div>
-      </div>
-      <div class="panel panel-default" id="driver-panel">
-        <div class="panel-body">
-          <h3>Driver Controlled</h3>
-        </div>
-      </div>
-      <div class="panel panel-default" id="endgame-panel">
-        <div class="panel-body">
-          <h3>Endgame</h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-1">&nbsp;</div>
-    </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5" id="input-side">
+        <div class="panel panel-default" id="autonomous-panel">
+          <div class="panel-body">
+            <h3>Autonomous</h3>
+            <form class="form-horizontal">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+              <!-- Beacons -->
+              <div class="form-group">
+                <label for="auto-beacon" class="col-sm-3 control-label">Beacons</label>
+                <label class="radio-inline">
+                  <input type="radio" name="auto-beacon" id="auto-beacon-0" value="0"> 0
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="auto-beacon" id="auto-beacon-1" value="1"> 1
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="auto-beacon" id="auto-beacon-2" value="2"> 2
+                </label>
+              </div>
+
+
+              <!-- Parking: Center -->
+
+              <div class="form-group">
+                <label for="auto-parking" class="col-sm-3 control-label" style="text-align:right;">Parking</label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="auto-parking" id="auto-parking-center" value="0"> On Center
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label class="radio-inline col-sm-offset-3">
+                  <input type="radio" name="auto-parking" id="auto-parking-ramp-partial" value="1"> Partial Ramp
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="auto-parking" id="auto-parking-ramp-full" value="2"> On Ramp
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="auto-parking" id="auto-parking-ramp-none" value="2" checked="true"> None
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label for="auto-balls-side" class="col-sm-3 control-label" style="text-align:right;">Side Balls</label>
+                <div class="input-group col-sm-2">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="auto-balls-side+">+</button>
+                  </span>
+                  <input type="text" class="form-control" id="auto-balls-side" value="0">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="auto-balls-side-">-</button>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="auto-balls-center" class="col-sm-3 control-label" style="text-align:right;">Center Balls</label>
+                <div class="input-group col-sm-2">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="auto-balls-center+">+</button>
+                  </span>
+                  <input type="text" class="form-control" id="auto-balls-center" value="0">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default decrease" type="button" id="auto-balls-center-">-</button>
+                  </span>
+                </div>
+              </div>
+
+
+
+
+
+            </div>
+
+
+            <!--form class="form-horizontal" style="padding-left:20px">
+              <div class="form-group" >
+                <b class="col-sm-4">Beacons</b><br>
+                <div class="col-sm-8">
+                  <label class="radio-inline">
+                    <input type="radio" name="auto-beacon" id="auto-beacon-0" value="0"> 0
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="auto-beacon" id="auto-beacon-1" value="1"> 1
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="auto-beacon" id="auto-beacon-2" value="2"> 2
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <b class="col-sm-4">Parking</b><br>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="auto-parking" id="auto-parking-center" value="0"> Center
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="auto-parking" id="auto-parking-ramp-part" value="1"> Partial Ramp
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="auto-parking" id="auto-parking-ramp-full" value="1"> Full Ramp
+                </label>
+              </div>
+
+
+
+              <div class="form-group">
+                <b class="col-sm-4">Balls in Side</b><br>
+                <div class="input-group col-sm-2" style="margin-left:13px">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="auto-balls-side-">+</button>
+                  </span>
+                  <input type="text" class="form-control" id="auto-balls-side" placeholder="0">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="auto-balls-side-">-</button>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <b class="col-sm-4">Balls in Center</b><br>
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="auto-balls-center+">+</button>
+                  </span>
+                  <input type="text" class="form-control" id="auto-balls-center" placeholder="0">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="auto-balls-center+">-</button>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group" style="padding-left:0px; margin-left:10px;">
+                <br>
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="auto-ball-dislodged" id="auto-ball-dislodged" value="1"> Ball Dislodged
+                </label>
+              </div>
+
+
+            </form-->
+
+
+        </div>
+        <div class="panel panel-default" id="driver-panel">
+          <div class="panel-body">
+            <h3>Driver Controlled</h3>
+          </div>
+        </div>
+        <div class="panel panel-default" id="endgame-panel">
+          <div class="panel-body">
+            <h3>Endgame</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1">&nbsp;</div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/calc.js"></script>
   </body>
 </html>
