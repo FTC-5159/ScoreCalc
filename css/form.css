@@ -1,0 +1,40 @@
+form{
+   /*Border */
+  border-style: ridge;
+  border-color: #0080ff;
+  border-width: 1px;
+  border-radius: 2px;
+  /*Background Color*/
+  background-color: #00ffff;
+  margin: 0;
+  padding: 10px;
+  /*Font*/
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+legend.auto{
+  /*Margin*/
+  margin-bottom: 25px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+fieldset{
+  margin-left: 10px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.miniform{
+    /* Border */
+    padding: 2px;
+    border-style: ridge;
+    border-color: #0000ff;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: #ffff00;
+    /*Background Color*/
+    background-color: #0080ff;
+    /* Font */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+}
+input.number{
+  /*Padding and Width*/
+  width: 25px;
+  padding-left: 10px;
+}
