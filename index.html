@@ -1,116 +1,118 @@
 <!DOCTYPE html>
 <html>
+  <div class="font">
   <head>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <title>FTC Score Calculator</title>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Metadata -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="ROBOTS" content="INDEX, FOLLOW">
     <meta http-equiv="Content-Language" content="en">
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="FTC 2016-17 Score Calculator">
     <meta property="og:description" content="An event based score calculator for the FTC 2016-17 season game.">
     <meta property="og:url" content="https://ftc-5159.github.io/ScoreCalc/">
-    <title>FTC Score Calculator</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/stylesheet.css" rel="stylesheet">
+    <meta property="og:image" content="Assets/images/challengecalc.png">
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Twitter Metadata -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@FTC_5159">
+    <meta name="twitter:title" content="FTC Score Calculator">
+    <meta name="twitter:description" content="An event based score calculator for the FTC 2016-17 season game Velocity Vortex.">
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Link CSS -->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Link Fonts -->
+    <!-- Open Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- CSS: font-family: 'Open Sans', sans-serif; -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   </head>
+  <!-- Using Nav Element to make a header -->
+  <nav>
+    <!-- I'm going to make a 'Home' link image later, I'll also take care of icons and stuff -->
+    <p><a href="https://FTC-5159.github.io/ScoreCalc/">FTC 2016-17 Score Calculator</a> Follow us <a href="https://twitter.com/FTC_5159">@FTC_5159 on Twitter</a> for updates</p>
+  </nav>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   <body>
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-5" id="input-side">
-        <div class="panel panel-default" id="autonomous-panel">
-          <div class="panel-body">
-            <h3>Autonomous</h3>
-            <form class="form-horizontal">
-
-              <!-- Beacons -->
-              <div class="form-group">
-                <label for="auto-beacon" class="col-sm-3 control-label">Beacons</label>
-                <label class="radio-inline">
-                  <input type="radio" name="auto-beacon" id="auto-beacon-0" value="0"> 0
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="auto-beacon" id="auto-beacon-1" value="1"> 1
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="auto-beacon" id="auto-beacon-2" value="2"> 2
-                </label>
-              </div>
-
-
-              <!-- Parking: Center -->
-              <div class="form-group">
-                <label for="auto-parking" class="col-sm-3 control-label" style="text-align:right;">Parking</label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" name="auto-parking" id="auto-parking-center" value="0"> On Center
-                </label>
-              </div>
-
-              <!-- Parking: Side -->
-              <div class="form-group">
-                <label for="auto-parking" class="col-sm-3 control-label" style="text-align:right;">Parking - side</label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" name="auto-parking" id="auto-parking-center" value="0">
-                </label>
-              </div>
-
-              <!-- <div class="form-group">
-                <label class="radio-inline col-sm-offset-3">
-                  <input type="radio" name="auto-parking" id="auto-parking-ramp-partial" value="1"> Partial Ramp
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="auto-parking" id="auto-parking-ramp-full" value="2"> On Ramp
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="auto-parking" id="auto-parking-ramp-none" value="2" checked="true"> None
-                </label>
-              </div> -->
-
-              <!-- Balls - Side -->
-              <div class="form-group">
-                <label for="auto-balls-side" class="col-sm-3 control-label" style="text-align:right;">Side Balls</label>
-                <div class="input-group col-sm-2">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="auto-balls-side+">+</button>
-                  </span>
-                  <input type="text" class="form-control" id="auto-balls-side" value="0">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="auto-balls-side-">-</button>
-                  </span>
-                </div>
-              </div>
-
-              <!-- Balls - Center -->
-              <div class="form-group">
-                <label for="auto-balls-center" class="col-sm-3 control-label" style="text-align:right;">Center Balls</label>
-                <div class="input-group col-sm-2">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="auto-balls-center+">+</button>
-                  </span>
-                  <input type="text" class="form-control" id="auto-balls-center" value="0">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default decrease" type="button" id="auto-balls-center-">-</button>
-                  </span>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="panel panel-default" id="driver-panel">
-          <div class="panel-body">
-            <h3>Driver Controlled</h3>
-          </div>
-        </div>
-        <div class="panel panel-default" id="endgame-panel">
-          <div class="panel-body">
-            <h3>Endgame</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-1">&nbsp;</div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/calc.js"></script>
+    <!-- Start Form -->
+    <form style="height:100%;" accept-charset="utf-8" autocomplete="off">
+       <!-- Autonomous -->
+       <fieldset class="miniform">
+        <legend style="margin-bottom: 30px; margin-top: 20px;" class="auto">Autonomous</legend>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+          <fieldset>
+            <legend>Center Parking</legend>
+              <!-- Center Parking -->
+              <!-- Partial -->
+              <label>Partial</label>
+              <input type="radio" name="centerparkpart" value="0" checked> 0
+              <input type="radio" name="centerparkpart" value="1"> 1
+              <input type="radio" name="centerparkpart" value="2"> 2<br>
+              <br><label>Full</label>
+              <input type="radio" name="centerpark" value="0" checked> 0
+              <input type="radio" name="centerpark" value="1"> 1
+              <input type="radio" name="centerpark" value="2"> 2
+          </fieldset>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+          <fieldset>
+            <legend>Corner Parking</legend> <!-- Auto. Corner Parking Header -->
+            <!-- Partial Corner Parking -->
+              <label>Partial</label>
+              <input type="radio" name="cornerparkpart" value="0" checked> 0
+              <input type="radio" name="cornerparkpart" value="1"> 1
+              <input type="radio" name="cornerparkpart" value="2"> 2<br>
+            <!-- Full Corner Parking -->
+              <br><label>Full</label>
+              <input type="radio" name="cornerparkauto" value="0" checked> 0
+              <input type="radio" name="cornerparkauto" value="1"> 1
+              <input type="radio" name="cornerparkauto" value="2"> 2
+          </fieldset>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+          <fieldset>
+              <legend>Particles Scored</legend> <!-- Auto. Particles Header -->
+            <!-- Corner Particles Scored -->
+                <label>Corner</label>
+                <input class="number" type="number" name="cornerparticlesauto" value="0" min="0" max="4"> <!-- Default 0 -->
+            <!-- Center Particles Scored -->
+                <label style="margin-left:5px;">Center</label>
+                <input class="number" type="number" name="cornerparticlesauto" value="0" min="0" max="4"> <!-- Default 0 -->
+          </fieldset>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+          <fieldset>
+            <legend>Team Beacons Claimed</legend>
+          <!-- Beacons, auto -->
+            <input class="number" type="number" name="beaconclaimauto" value="0" min="0" max="2">
+          </fieldset>
+          <fieldset>
+            <legend>Cap Ball on Ground</legend>
+          <!-- Cap ball ground, auto -->
+            <input type="radio" name="capballgroundautoY">
+          </fieldset>
+       </fieldset> <!-- Autonomous fieldset end -->
+       <fieldset> <!-- Driver Period Start -->
+         <label>Test!</label>
+       </fieldset>
+      <!-- Send Results or Reset Form -->
+      <input style="margin-left:10px;" type="submit" value="Submit"><input style="margin-left:10px;" type="reset" value="Reset">
+    </form>
   </body>
+  <footer>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- CC by-nc-sa License attribution metadata -->
+    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">FTC Score Calculator</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ftc-5159.github.io/ScoreCalc/" property="cc:attributionName" rel="cc:attributionURL">FTC Team 5159</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><a><img alt="Creative Commons by-nc-sa 4.0 License" style="border-width:0; margin-left:10px; margin-top:15px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- First logo attribution and lack of direct association -->
+    <p><a href="http://www.firstinspires.org/node/4146"><b><i>First</i></b>, and the <b><i>First</i></b> logo is property of</a><a href="http://www.firstinspires.org/sites/default/files/uploads/resource_library/first-brand-guidelines-web-2015.pdf"><b><i>First</i></b> and used in accordance with the respective branding guidlines.</a></p>
+    <p>This site is in no way associated with or endorsed by <b><i>First</i></b>, its sponsors, or affilliates.</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  </footer>
+</div> <!-- End font div -->
 </html>

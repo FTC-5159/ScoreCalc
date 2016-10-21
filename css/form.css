@@ -1,4 +1,8 @@
+/*Form attributes*/
 form{
+  /*Width and Justification*/
+  /* NOTE: JUSTIFY CENTER BUT IF POSSIBLE USE SOME SORT OF FLOAT */
+  width: 33.3%;
    /*Border */
   border-style: ridge;
   border-color: #0080ff;
@@ -8,12 +12,12 @@ form{
   background-color: #00ffff;
   margin: 0;
   padding: 10px;
-  /*Font*/
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 legend.auto{
   /*Margin*/
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  padding-bottom: 25px;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 fieldset{
@@ -30,7 +34,6 @@ fieldset{
     border-color: #ffff00;
     /*Background Color*/
     background-color: #0080ff;
-    /* Font */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 }
 input.number{
@@ -38,3 +41,4 @@ input.number{
   width: 25px;
   padding-left: 10px;
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
