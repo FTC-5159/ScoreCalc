@@ -43,8 +43,11 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   <body>
     <!-- Start Form -->
+    <div class="parent"> <!-- Parent align div -->
     <form style="height:100%;" accept-charset="utf-8" autocomplete="off">
        <!-- Autonomous -->
+       <div class="child">
+         <div class="childinner">
        <fieldset class="miniform">
         <legend style="margin-bottom: 30px; margin-top: 20px;" class="auto">Autonomous</legend>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -96,13 +99,24 @@
           <!-- Cap ball ground, auto -->
             <input type="radio" name="capballgroundautoY">
           </fieldset>
-       </fieldset> <!-- Autonomous fieldset end -->
-       <fieldset> <!-- Driver Period Start -->
-         <label>Test!</label>
        </fieldset>
+     </div>
+     </div> <!-- Autonomous fieldset end -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+     <div class="child">
+      <div class="childinner">
+        <fieldset class="miniform">
+       <fieldset> <!-- Driver Period Start -->
+         <label style="margin-bottom: 30px; margin-top: 20px;" class="auto">Driver Controlled</label>
+       </fieldset>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
       <!-- Send Results or Reset Form -->
       <input style="margin-left:10px;" type="submit" value="Submit"><input style="margin-left:10px;" type="reset" value="Reset">
     </form>
+  </div> <!-- End innerchild div -->
+</div> <!-- End child div -->
+  </div> <!-- End parent align div -->
+  </aside>
   </body>
   <footer>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

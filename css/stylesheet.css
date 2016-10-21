@@ -1,4 +1,22 @@
-div.font{
+html{
   background-color: #b3b3b3;
   font-family: 'Open Sans', sans-serif;
+}
+
+.parent{
+  width: 100%;
+  display: table;
+}
+
+.child{
+  width: 33%;
+  display: table-cell;
+}
+
+.childinner{
+  margin-left: 25px;
+}
+
+.child:first-child .childinner {
+    margin-left: 0;
 }
